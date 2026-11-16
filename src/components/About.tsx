@@ -17,13 +17,13 @@ export function About() {
           />
         </div>
 
-        <div className="reveal">
+        <div className="reveal text-center lg:text-left">
           <h2 className="text-4xl font-bold leading-tight text-ink sm:text-5xl">
             Olá, eu sou
             <br />
             Heitor Pereira! <span aria-hidden>👋</span>
           </h2>
-          <div className="mt-8 space-y-7 text-lg leading-[1.95] text-muted sm:text-justify">
+          <div className="mt-8 space-y-7 text-lg leading-[1.95] text-muted lg:text-justify">
             <p>
               Minha jornada com os idiomas começou com uma mala e uma imersão profunda em solo europeu.
               Foi morando e estudando na França que descobri que aprender uma nova língua é, na verdade,

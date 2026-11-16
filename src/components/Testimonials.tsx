@@ -38,15 +38,15 @@ export function Testimonials() {
               <QuoteOpen className="absolute -left-1 bottom-6 hidden w-16 text-sky sm:block" />
               <QuoteClose className="absolute -right-1 top-0 hidden w-16 text-sky sm:block" />
 
-              <div className="flex gap-1 text-sky" aria-label="5 de 5 estrelas" role="img">
+              <div className="flex justify-center gap-1 text-sky sm:justify-start" aria-label="5 de 5 estrelas" role="img">
                 {Array.from({ length: 5 }).map((_, s) => (
                   <Star key={s} className="size-5" />
                 ))}
               </div>
-              <blockquote className="mt-4 text-[17px] leading-[1.9] text-muted sm:text-justify sm:text-lg">
+              <blockquote className="mt-4 text-center text-[17px] leading-[1.9] text-muted sm:text-justify sm:text-lg">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
-              <figcaption className="mt-3 text-right text-sky">
+              <figcaption className="mt-3 text-center text-sky sm:text-right">
                 <span className="block text-lg font-bold">{t.name}</span>
                 <span className="block text-[17px]">{t.role}</span>
               </figcaption>

@@ -55,9 +55,9 @@ const highlights = [
 export function Highlights() {
   return (
     <section aria-label="Diferenciais" className="bg-sun">
-      <ul className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-10 sm:px-8 lg:grid lg:grid-cols-3 lg:items-center lg:gap-10 lg:py-14 xl:gap-14">
+      <ul className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-10 sm:px-8 items-center lg:grid lg:grid-cols-3 lg:items-center lg:gap-10 lg:py-14 xl:gap-14">
         {highlights.map(({ Icon, text }) => (
-          <li key={text} className="flex min-w-0 items-center gap-3 text-base font-bold text-ink lg:justify-center xl:text-[1.05rem]">
+          <li key={text} className="flex min-w-0 flex-col items-center gap-2 text-center text-base font-bold text-ink lg:flex-row lg:justify-center lg:gap-3 lg:text-left xl:text-[1.05rem]">
             <Icon className="size-7 shrink-0" />
             {text}
           </li>
