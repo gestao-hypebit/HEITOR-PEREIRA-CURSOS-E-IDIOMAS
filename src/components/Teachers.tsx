@@ -71,33 +71,33 @@ export function Teachers() {
           </p>
         </div>
 
-        <div className="mt-20 grid gap-x-16 gap-y-20 px-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-20">
+        <div className="mx-auto mt-20 grid max-w-5xl gap-x-16 gap-y-20 px-4 sm:grid-cols-2 lg:gap-x-24">
           {teachers.map((t) => (
             <TeacherCard key={t.name} t={t} />
           ))}
-        </div>
 
-        {/* Card "Professor Parceiro" */}
-        <a
-          href={whatsappLink("Olá! Tenho interesse em ser um Professor(a) Parceiro.")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="reveal group relative mx-auto mt-24 block w-full max-w-[400px] px-4 lg:translate-x-[45%]"
-        >
-          <div className="overflow-hidden rounded-2xl shadow-[0_30px_50px_-20px_rgb(0_0_0/0.4)]">
-            <Image
-              src="/images/prof-parceiro.webp"
-              alt="Silhueta representando a vaga para professor parceiro"
-              width={1200}
-              height={675}
-              sizes="(min-width: 640px) 360px, 92vw"
-              className="aspect-[9/8] w-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]"
-            />
-          </div>
-          <span className="absolute -right-2 bottom-16 rounded-2xl bg-white px-4 py-3 text-base font-bold text-ink shadow-[0_8px_20px_rgb(0_0_0/0.18)] transition-colors group-hover:text-pink sm:-right-20 sm:text-lg">
-            &quot;Seja um Professor(a) Parceiro&quot;
-          </span>
-        </a>
+          {/* Card "Professor Parceiro" */}
+          <a
+            href={whatsappLink("Olá! Tenho interesse em ser um(a) professor(a) parceiro(a).")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="reveal group relative mx-auto block w-full max-w-[400px]"
+          >
+            <div className="overflow-hidden rounded-2xl shadow-[0_30px_50px_-20px_rgb(0_0_0/0.4)]">
+              <Image
+                src="/images/prof-parceiro.webp"
+                alt="Silhueta representando a vaga para professor parceiro"
+                width={1200}
+                height={675}
+                sizes="(min-width: 640px) 360px, 92vw"
+                className="aspect-[9/8] w-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+            </div>
+            <span className="absolute -right-2 bottom-16 rounded-2xl bg-white px-4 py-3 text-base font-bold text-ink shadow-[0_8px_20px_rgb(0_0_0/0.18)] transition-colors group-hover:text-pink sm:-right-6 sm:text-lg">
+              &quot;Seja um(a) professor(a) parceiro(a)&quot;
+            </span>
+          </a>
+        </div>
       </div>
     </section>
   );

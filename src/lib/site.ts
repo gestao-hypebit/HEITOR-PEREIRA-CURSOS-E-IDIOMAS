@@ -1,7 +1,6 @@
 // Configurações centrais do site — altere aqui contato e links.
 
-// TODO: confirmar o número de WhatsApp com o cliente (formato: 55 + DDD + número, só dígitos).
-export const WHATSAPP_NUMBER = "5591999999999";
+export const WHATSAPP_NUMBER = "5591981584536";
 
 export const WHATSAPP_MESSAGE =
   "Olá! Vim pelo site e gostaria de saber mais sobre os cursos de idiomas.";
