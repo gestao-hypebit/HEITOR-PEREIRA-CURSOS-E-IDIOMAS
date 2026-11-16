@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #111111;
+  --color-muted: #3d3d3d;
+  --color-pink: #ff0a7a;
+  --color-pink-dark: #e00068;
+  --color-sun: #ffd600;
+  --color-sky: #29a8ff;
+  --color-sky-dark: #1690e6;
+  --color-brand-red: #c8203a;
+  --color-brand-navy: #1e2b3c;
+  --color-online: #22c55e;
+  --color-call: #202124;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+/* Fundo de pontinhos usado nas seções claras */
+.bg-dots {
+  background-image: radial-gradient(rgb(0 0 0 / 0.06) 2px, transparent 2.5px);
+  background-size: 30px 30px;
+}
+
+/* Fundo com linhas curvas suaves (seção "Fale, compreenda") */
+.bg-waves {
+  background-color: #fafafa;
+  background-image:
+    radial-gradient(rgb(0 0 0 / 0.05) 2px, transparent 2.5px),
+    repeating-radial-gradient(
+      circle at -10% 110%,
+      transparent 0 38px,
+      rgb(0 0 0 / 0.035) 38px 40px
+    );
+  background-size:
+    30px 30px,
+    100% 100%;
+  background-position:
+    right top,
+    0 0;
+}
+
+/* Accordion de idiomas (<details> nativo) */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .chevron {
+  transform: rotate(180deg);
+}
+details::details-content {
+  transition:
+    height 0.3s ease,
+    content-visibility 0.3s allow-discrete;
+  height: 0;
+  overflow: clip;
+}
+details[open]::details-content {
+  height: auto;
+}
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* Revelar ao rolar (só em navegadores com suporte) */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
