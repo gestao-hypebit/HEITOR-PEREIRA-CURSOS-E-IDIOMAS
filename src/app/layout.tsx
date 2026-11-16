@@ -41,7 +41,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" className={`${montserrat.variable} antialiased`}>
-      <body className="min-h-full font-sans">{children}</body>
+      <body className="min-h-full overflow-x-clip font-sans">{children}</body>
     </html>
   );
 }

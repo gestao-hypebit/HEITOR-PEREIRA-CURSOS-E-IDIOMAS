@@ -25,15 +25,15 @@ export function Hero() {
           <div className="overflow-hidden shadow-[0_40px_60px_-20px_rgb(0_0_0/0.45)]">
             <Image
               src="/images/hero-aula-online.webp"
-              alt="Aula de idiomas ao vivo pelo Google Meet com o professor Heitor Pereira e alunos"
+              alt="Aula de inglês ao vivo pelo Google Meet com o professor Heitor Pereira e alunos"
               width={1024}
-              height={834}
+              height={840}
               preload
               sizes="(min-width: 1024px) 740px, 100vw"
               className="h-auto w-full"
             />
           </div>
-          <span className="absolute -left-3 top-[16%] inline-flex items-center gap-2.5 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-ink shadow-[0_8px_24px_rgb(0_0_0/0.18)] sm:-left-12 sm:px-5 sm:text-lg">
+          <span className="absolute -left-3 top-[52%] inline-flex items-center gap-2.5 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-ink shadow-[0_8px_24px_rgb(0_0_0/0.18)] sm:-left-12 sm:px-5 sm:text-lg">
             <span className="relative flex size-3">
               <span className="absolute inset-0 animate-ping rounded-full bg-online opacity-60" />
               <span className="relative size-3 rounded-full bg-online" />
@@ -55,9 +55,9 @@ const highlights = [
 export function Highlights() {
   return (
     <section aria-label="Diferenciais" className="bg-sun">
-      <ul className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-10 sm:px-8 lg:flex-row lg:items-center lg:justify-center lg:gap-10 lg:py-14 xl:gap-14">
+      <ul className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-10 sm:px-8 lg:grid lg:grid-cols-3 lg:items-center lg:gap-10 lg:py-14 xl:gap-14">
         {highlights.map(({ Icon, text }) => (
-          <li key={text} className="flex items-center gap-3 text-base font-bold text-ink xl:whitespace-nowrap xl:text-[1.05rem]">
+          <li key={text} className="flex min-w-0 items-center gap-3 text-base font-bold text-ink lg:justify-center xl:text-[1.05rem]">
             <Icon className="size-7 shrink-0" />
             {text}
           </li>

@@ -42,7 +42,7 @@ function TeacherCard({ t }: { t: Teacher }) {
           className="aspect-[9/8] w-full object-cover object-bottom"
         />
       </div>
-      <figcaption className="absolute -right-2 top-4 rounded-2xl bg-white px-4 py-3 text-base font-bold text-ink shadow-[0_8px_20px_rgb(0_0_0/0.18)] sm:-right-6 sm:text-lg">
+      <figcaption className="absolute -right-2 -top-5 rounded-xl bg-white px-3.5 py-2 text-sm font-bold text-ink shadow-[0_8px_20px_rgb(0_0_0/0.18)] sm:-right-6 sm:text-base">
         {t.name}
       </figcaption>
       {t.status && (

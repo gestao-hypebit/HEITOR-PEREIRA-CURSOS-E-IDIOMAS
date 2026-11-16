@@ -58,7 +58,7 @@ export function Method() {
           </div>
         </div>
 
-        <div className="reveal">
+        <div className="reveal mx-auto min-w-0 max-w-xl text-center">
           <h2 className="text-balance text-3xl font-bold leading-tight text-ink sm:text-[2.75rem]">
             Fale, compreenda e conquiste novos desafios
           </h2>
